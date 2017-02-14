@@ -27,7 +27,7 @@ We're going to be lazy here, and simply make a couple of small modifications to 
     -dname "C=GB,ST=Greater London,L=London,O=Dell EMC,OU=Apps and Data,CN=abd.dell.com"  
  
 ## Step 3 - Configure Spring Boot to use SSL and the new certificate  
-(You can also retrieve the `application.properites` shown below from [here](https://github.com/bendalby82/cf-tcp-routing-ssl/blob/master/scripts/application.properties))  
+(You can also retrieve the `application.properties` shown below from [here](https://github.com/bendalby82/cf-tcp-routing-ssl/blob/master/scripts/application.properties))  
 
     $ cd [GITHUB HOME]/gs-spring-boot/intial/src/main/resources
     $ cat <<EOT >> application.properties  
