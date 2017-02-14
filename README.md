@@ -1,9 +1,6 @@
 # PCF TCP Routing And SSL
 Use Pivotal Cloud Foundry's TCP routing feature to terminate SSL at your application
 
-# Contents
-Table of contents here
-
 # Introduction
 A common security requirement for customers in regulated industries such as banking and healthcare is that all traffic should be secured end-to-end with SSL. Prior to Pivotal Cloud Foundry 1.8, inbound SSL connections would always terminate on the Gorouter, and further encryption could only be achieved between the Gorouter and running applications by installing Pivotal's [IPsec Add-on](https://docs.pivotal.io/addon-ipsec/index.html)  
 
@@ -60,9 +57,11 @@ We're going to be lazy here, and simply make a couple of small modifications to 
     $ cf map-route gs-spring tcp.local.pcfdev.io --port 61015
 
 ## Step 7 - Verify you can now connect directly to your application over SSL
-Browse to https://tcp.local.pcfdev.io:61015/ (substitute your own port at the end):
+Browse to https://tcp.local.pcfdev.io:61015/ (substitute your own port at the end):  
+<img src="https://github.com/bendalby82/cf-tcp-routing-ssl/blob/master/images/HTTPS-to-my-app.png" width="500px">  
 
-View details of the certificate to verify it is the one you just generated:
+View details of the certificate to verify it is the one you just generated:  
+<img src="https://github.com/bendalby82/cf-tcp-routing-ssl/blob/master/images/view-certificate.png" width="650px">  
 
 # Further Reading
 **Enabling TCP Routing**  
@@ -71,5 +70,5 @@ View details of the certificate to verify it is the one you just generated:
 **How to tell application containers (running Java apps) to trust self-signed certs or a private/internal CA**
 [https://discuss.pivotal.io/hc/en-us/articles/223454928-How-to-tell-application-containers-running-Java-apps-to-trust-self-signed-certs-or-a-private-internal-CA](https://discuss.pivotal.io/hc/en-us/articles/223454928-How-to-tell-application-containers-running-Java-apps-to-trust-self-signed-certs-or-a-private-internal-CA)  
   
-**Enable HTTPS in Spring Boot**
+**Enable HTTPS in Spring Boot**  
 [https://drissamri.be/blog/java/enable-https-in-spring-boot/](https://drissamri.be/blog/java/enable-https-in-spring-boot/)
