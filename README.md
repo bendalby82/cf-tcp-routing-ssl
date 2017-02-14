@@ -1,8 +1,8 @@
-# PCF TCP Routing And SSL
-Use Pivotal Cloud Foundry's TCP routing feature to terminate SSL at your application
+# Cloud Foundry TCP Routing and SSL
+Using Cloud Foundry's TCP routing feature to terminate SSL at your application
 
 # Introduction
-A common security requirement for customers in regulated industries such as banking and healthcare is that all traffic should be secured end-to-end with SSL. Prior to Pivotal Cloud Foundry 1.8, inbound SSL connections would always terminate on the Gorouter, and further encryption could only be achieved between the Gorouter and running applications by installing Pivotal's [IPsec Add-on](https://docs.pivotal.io/addon-ipsec/index.html)  
+A common security requirement for customers in regulated industries such as banking and healthcare is that all traffic should be secured end-to-end with SSL. Prior to Pivotal Cloud Foundry 1.8, inbound SSL connections would [always terminate on the Gorouter](http://docs.pivotal.io/pivotalcf/1-9/adminguide/securing-traffic.html#ssl_options), and further encryption could only be achieved between the Gorouter and running applications by installing Pivotal's [IPsec Add-on](https://docs.pivotal.io/addon-ipsec/index.html)  
 
 With the introduction in version 1.8 of TCP routing, it is now possible to terminate SSL right at your application - and this article will walk you through a working example of a Spring Boot application that is secured with SSL.  
 
@@ -27,6 +27,7 @@ We're going to be lazy here, and simply make a couple of small modifications to 
     -dname "C=GB,ST=Greater London,L=London,O=Dell EMC,OU=Apps and Data,CN=abd.dell.com"  
  
 ## Step 3 - Configure Spring Boot to use SSL and the new certificate  
+(You can also retrieve the `application.properites` shown below from [here](https://github.com/bendalby82/cf-tcp-routing-ssl/blob/master/scripts/application.properties))  
 
     $ cd [GITHUB HOME]/gs-spring-boot/intial/src/main/resources
     $ cat <<EOT >> application.properties  
@@ -42,14 +43,14 @@ We're going to be lazy here, and simply make a couple of small modifications to 
     $ cd [GITHUB HOME]/gs-spring-boot/intial  
     $ mvn clean package  
 
-## Step 5 - Push the application to PCF Dev
+## Step 5 - Push the application to PCF Dev (use default org and space)
     
     $ cd [GITHUB HOME]/gs-spring-boot/intial
+    $ cf target -o pcfdev-org -s pcfdev-space
     $ cf push gs-spring-boot -p target/gs-spring-boot-0.1.0.jar  
 
 ## Step 6 - Create a TCP route and map it to your application
     
-    (Assuming we are in default pcfdev-space):
     $ cf create-route pcfdev-space tcp.local.pcfdev.io --random-port
     Creating route tcp.local.pcfdev.io for org pcfdev-org / space pcfdev-space as admin...
     OK
