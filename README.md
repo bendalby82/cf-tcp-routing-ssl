@@ -60,10 +60,10 @@ We're going to be lazy here, and simply make a couple of small modifications to 
     $ cf map-route gs-spring tcp.local.pcfdev.io --port 61015
 
 ## Step 7 - Verify you can now connect directly to your application over SSL
-Browse to https://tcp.local.pcfdev.io:61015/ (substitute your own port at the end):  
+Browse to https://tcp.local.pcfdev.io:61015/ (substitute your own port after the colon):  
 <img src="https://github.com/bendalby82/cf-tcp-routing-ssl/blob/master/images/HTTPS-to-my-app.png" width="500px">  
 
-View details of the certificate to verify it is the one you just generated:  
+View details of the certificate to verify it is the one you just generated (note the procedure has just changed if you are using [Chrome](http://www.howtogeek.com/292076/how-do-you-view-ssl-certificate-details-in-google-chrome/)):  
 <img src="https://github.com/bendalby82/cf-tcp-routing-ssl/blob/master/images/view-certificate.png" width="650px">  
 
 # Further Reading
