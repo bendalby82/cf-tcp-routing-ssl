@@ -65,8 +65,11 @@ Browse to https://tcp.local.pcfdev.io:61015/ (substitute your own port at the en
 View details of the certificate to verify it is the one you just generated:
 
 # Further Reading
-Enabling TCP Routing  
+**Enabling TCP Routing**  
 [http://docs.pivotal.io/pivotalcf/1-9/adminguide/enabling-tcp-routing.html](http://docs.pivotal.io/pivotalcf/1-9/adminguide/enabling-tcp-routing.html)  
 
-How to tell application containers (running Java apps) to trust self-signed certs or a private/internal CA
-[https://discuss.pivotal.io/hc/en-us/articles/223454928-How-to-tell-application-containers-running-Java-apps-to-trust-self-signed-certs-or-a-private-internal-CA](https://discuss.pivotal.io/hc/en-us/articles/223454928-How-to-tell-application-containers-running-Java-apps-to-trust-self-signed-certs-or-a-private-internal-CA)
+**How to tell application containers (running Java apps) to trust self-signed certs or a private/internal CA**
+[https://discuss.pivotal.io/hc/en-us/articles/223454928-How-to-tell-application-containers-running-Java-apps-to-trust-self-signed-certs-or-a-private-internal-CA](https://discuss.pivotal.io/hc/en-us/articles/223454928-How-to-tell-application-containers-running-Java-apps-to-trust-self-signed-certs-or-a-private-internal-CA)  
+  
+**Enable HTTPS in Spring Boot**
+[https://drissamri.be/blog/java/enable-https-in-spring-boot/](https://drissamri.be/blog/java/enable-https-in-spring-boot/)
