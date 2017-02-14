@@ -6,7 +6,7 @@ A common security requirement for customers in regulated industries such as bank
 
 Prior to Pivotal Cloud Foundry 1.8, inbound SSL connections would [always terminate on the Gorouter](http://docs.pivotal.io/pivotalcf/1-9/adminguide/securing-traffic.html#ssl_options), and further encryption could only be achieved between the Gorouter and running applications by installing Pivotal's [IPsec Add-on](https://docs.pivotal.io/addon-ipsec/index.html)  
 
-With the introduction in version 1.8 of TCP routing, it is now possible to terminate SSL right at your application - and this article will walk you through a working example of a Spring Boot application that is secured with SSL.  
+With the introduction in version 1.8 of TCP routing, it is now possible to terminate SSL right at your application - and this article will walk you through a working example of a Spring Boot application that is secured with SSL in this way.   
 
 # Prerequisites  
 PCF Dev version 0.23.0 or later    
