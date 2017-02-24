@@ -1,5 +1,6 @@
 # Walkthrough: Cloud Foundry TCP Routing and SSL
-Use Cloud Foundry's TCP routing feature to terminate SSL directly in your application
+Use Cloud Foundry's TCP routing feature to terminate SSL directly in your application  
+(Published at http://dojoblog.emc.com/tcp-routing/tcp-routing-and-ssl/)
 
 # Introduction
 A common security requirement for customers in regulated industries such as banking and healthcare is that all traffic should be secured end-to-end with SSL. 
