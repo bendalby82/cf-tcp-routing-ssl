@@ -32,7 +32,7 @@ We're going to be lazy here, and simply make a couple of small modifications to 
 ## Step 3 - Configure Spring Boot to use SSL and the new certificate  
 (You can also retrieve the `application.properties` shown below from [here](https://github.com/bendalby82/cf-tcp-routing-ssl/blob/master/scripts/application.properties))  
 
-    $ cd [GITHUB HOME]/gs-spring-boot/intial/src/main/resources
+    $ cd [GITHUB HOME]/gs-spring-boot/initial/src/main/resources
     $ cat <<EOT >> application.properties  
     server.port: 8080
     server.ssl.key-store: classpath:keystore.p12
@@ -43,12 +43,12 @@ We're going to be lazy here, and simply make a couple of small modifications to 
     
 ## Step 4 - Package the application
     
-    $ cd [GITHUB HOME]/gs-spring-boot/intial  
+    $ cd [GITHUB HOME]/gs-spring-boot/initial  
     $ mvn clean package  
 
 ## Step 5 - Push the application to PCF Dev (use default org and space)
     
-    $ cd [GITHUB HOME]/gs-spring-boot/intial
+    $ cd [GITHUB HOME]/gs-spring-boot/initial
     $ cf target -o pcfdev-org -s pcfdev-space
     $ cf push gs-spring-boot -p target/gs-spring-boot-0.1.0.jar  
 
